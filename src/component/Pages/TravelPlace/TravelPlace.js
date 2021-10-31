@@ -1,10 +1,18 @@
 
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 import './TravelPlace.css';
 
 const TravelPlace = (props) => {
-    const { img, location, view, transpot, placeName, cost } = props.placeItem;
+    const { img, placeName, details, _id } = props.placeItem;
+
+    const history = useHistory();
+
+    const placeOrderhandle = id => {
+        const url = `/placeOrder/${id}`;
+        history.push(url);
+    }
     return (
         <div>
             <div className="col h-100">
@@ -12,13 +20,9 @@ const TravelPlace = (props) => {
                     <img className='img-resize' src={img} alt="" />
                     <div className="card-body">
                         <h5 className="card-title">Place: {placeName}</h5>
-                        <p>Location: {location}</p>
-                        <p>Transportation: {transpot}</p>
-                        <p>View: {view}</p>
-                        <p>Cost: $ {cost}</p>
+                        <p>{details}</p>
                     </div>
-                    <Button className="text-light">Booking Now</Button>
-                    {/* <button className="btn btn-dark text-light">Booking Now</button> */}
+                    <Button onClick={() => placeOrderhandle(_id)} className="text-light">Booking Now</Button>
                 </div>
             </div>
         </div>

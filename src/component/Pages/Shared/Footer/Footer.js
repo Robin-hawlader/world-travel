@@ -1,7 +1,17 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { fab, faFacebookSquare, faInstagram, faTwitterSquare, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
 import './Footer.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+
+const fb = <FontAwesomeIcon icon={faFacebookSquare} />
+const tawiter = <FontAwesomeIcon icon={faTwitterSquare} />
+const youTube = <FontAwesomeIcon icon={faYoutube} />
+const insta = <FontAwesomeIcon icon={faInstagram} />
+
+const rightAngle = <FontAwesomeIcon icon={faAngleRight} />
 
 const Footer = () => {
     return (
@@ -10,26 +20,26 @@ const Footer = () => {
                 <Row md={3}>
                     <Col sm={12} className='text-light'>
                         <div>
-                            <h2> A good hospital Objective</h2>
-                            <p>The best hospitals always prioritize the patient’s comfort and convenience at each stage of their journey. A good hospital should focus on making the patient’s experience as seamless as possible, right from appointment booking to discharge.</p>
+                            <h4>Flow Our Social Networks</h4>
+                            <h2 className='mt-4 ms-3'><span className='ms-3 text-primary'>{fb}</span><span className='ms-3 text-danger'>{youTube}</span><span className='ms-3 text-info'>{tawiter}</span><span className='ms-3 text-danger'>{insta}</span></h2>
                         </div>
                     </Col>
                     <Col sm={12}>
-                        <nav className='link-decorate text-light'>
+                        <nav className='link-footer text-light'>
                             <h3>Main Links</h3>
-                            <Link to="/home"> Home</Link> <br />
-                            <Link to="/service"> Service</Link> <br />
-                            <Link to="/doctor"> Doctors</Link><br />
-                            <Link to="/about"> About us</Link><br />
-                            <Link to="/login"> Login</Link>
+                            <Link to="/home">{rightAngle} Home</Link> <br />
+                            <Link to="/mycart">{rightAngle} My Cart</Link> <br />
+                            <Link to="/booking">{rightAngle} Booking</Link><br />
+                            <Link to="/addServices">{rightAngle}  Add New</Link><br />
+                            <Link to="/login">{rightAngle} Login</Link>
 
                         </nav>
 
                     </Col>
                     <Col sm={12} className='text-light'>
                         <div className='opening'>
-                            <h3>Opening Hours</h3>
-                            <p> 24/7 hours Open <br /><span className='text-danger'><b>Friday Open</b></span></p>
+                            <h4>Up Comming Events</h4>
+                            <h2 className='text-danger'>Off-  50%</h2>
                         </div>
                     </Col>
                 </Row>

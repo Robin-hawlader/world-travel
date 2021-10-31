@@ -15,11 +15,11 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="ms-auto link-decorate">
                             <Link to="/home">Home</Link>
-                            <Link to="/destination">Destination</Link>
-                            <Link to="/special">Special</Link>
-                            <Link to="/about">About</Link>
+                            <Link to="/mycart">MyCart</Link>
+                            <Link to="/booking">All Booking</Link>
+                            <Link to="/addServices">Add New</Link>
                             {
-                                user.email ? <Button onClick={logOut} className='ms-2'>Logout</Button>
+                                user.email ? <Button variant='danger' onClick={logOut} className='ms-2'>Logout</Button>
                                     :
                                     <Link to='/login'>Login</Link>
                             }

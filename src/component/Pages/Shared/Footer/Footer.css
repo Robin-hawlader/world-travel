@@ -1,4 +1,4 @@
-.link-decorate a{
+.link-footer a{
     text-decoration: none;
     color: white;
     font-weight: 500;
@@ -6,7 +6,7 @@
     
 }
 
-.link-decorate{
+.link-footer{
     margin-left: 40%;
 }
 .opening{
