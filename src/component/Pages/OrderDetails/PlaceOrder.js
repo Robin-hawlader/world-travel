@@ -14,15 +14,14 @@ const Details = () => {
     const [product, setProduct] = useState({})
     const { img, view, location, placeName, transpot, cost } = product;
     useEffect(() => {
-        fetch(`http://localhost:5000/travels/${id}`)
+        fetch(`https://haunted-goblin-46133.herokuapp.com/travels/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
     const { register, reset, handleSubmit, } = useForm();
     const onSubmit = data => {
         data.selectItem = product;
-        console.log(data)
-        fetch('http://localhost:5000/booking', {
+        fetch('https://haunted-goblin-46133.herokuapp.com/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

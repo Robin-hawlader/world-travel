@@ -11,12 +11,12 @@ const Home = () => {
     const [places, setPlaces] = useState([]);
     const [newPost, setNewPost] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/travels')
+        fetch('https://haunted-goblin-46133.herokuapp.com/travels')
             .then(res => res.json())
             .then(data => setPlaces(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/addBookings')
+        fetch('https://haunted-goblin-46133.herokuapp.com/addBookings')
             .then(res => res.json())
             .then(data => setNewPost(data))
     }, [])

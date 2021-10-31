@@ -4,7 +4,7 @@ import notFound from '../../../images/not-found/not-found-page.jpg';
 const NotFound = () => {
     return (
         <div className='text-center my-5'>
-            <img src={notFound} alt="" />
+            <img className='img-fluid' src={notFound} alt="" />
         </div>
     );
 };

@@ -3,7 +3,6 @@ import './AddNewPost.css'
 
 const AddNewPost = (props) => {
     const { img, name, description, price } = props.post;
-    console.log(props.post)
     return (
         <div>
             <div className="col h-100">

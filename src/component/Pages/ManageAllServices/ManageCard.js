@@ -6,7 +6,6 @@ const ManageCard = (props) => {
     const { allbooking } = props;
     const { handleDelete } = props;
     const { details, cost, placeName, img } = selectItem;
-    console.log(props)
     return (
         <div>
             <Col>

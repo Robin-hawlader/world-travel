@@ -10,7 +10,7 @@ const Mycart = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://haunted-goblin-46133.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setCart(data))
     }, [])
@@ -19,13 +19,12 @@ const Mycart = () => {
 
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/booking/${id}`;
+        const url = `https://haunted-goblin-46133.herokuapp.com/booking/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.deletedCount > 0) {
                     window.confirm('Are you sure you want to delete your selected item?')
 

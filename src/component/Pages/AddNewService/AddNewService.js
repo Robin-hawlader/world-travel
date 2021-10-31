@@ -7,11 +7,9 @@ import Footer from '../Shared/Footer/Footer';
 const AddNewService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
 
-        axios.post('http://localhost:5000/addBookings', data)
+        axios.post('https://haunted-goblin-46133.herokuapp.com/addBookings', data)
             .then(res => {
-                console.log(res)
                 if (res.data.insertedId) {
                     alert('Added Successfully')
                     reset()

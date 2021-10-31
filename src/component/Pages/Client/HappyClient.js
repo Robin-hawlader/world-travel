@@ -5,7 +5,7 @@ import Client from './Client';
 const HappyClient = () => {
     const [user, setUser] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/clients')
+        fetch('https://haunted-goblin-46133.herokuapp.com/clients')
             .then(res => res.json())
             .then(data => setUser(data))
     }, [])
