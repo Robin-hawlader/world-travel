@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { fab, faFacebookSquare, faInstagram, faTwitterSquare, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookSquare, faInstagram, faTwitterSquare, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
 import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

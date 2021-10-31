@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import useAuth from '../../Context/UseAuth';
 import { Card, Col, Container, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
 import Footer from '../Shared/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 const Details = () => {
     const { user } = useAuth();
@@ -55,8 +56,8 @@ const Details = () => {
                                     <ListGroupItem>Package Cost: {cost}</ListGroupItem>
                                 </ListGroup>
                                 <Card.Body>
-                                    <Card.Link href="#">Card Link</Card.Link>
-                                    <Card.Link href="#">Another Link</Card.Link>
+                                    <Link to='/home'>Go Home</Link>
+                                    <Link className='ms-3' to='/mycart'>My Cart</Link>
                                 </Card.Body>
                             </Card>
                         </Col>
